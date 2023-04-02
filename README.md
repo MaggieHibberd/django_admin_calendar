@@ -1,3 +1,5 @@
+## !! WIP !!
+
 * Clone this repository
 * Open in your IDE
 * CD into the same folder that manage.py is located 
