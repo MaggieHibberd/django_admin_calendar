@@ -21,7 +21,7 @@ class Event(models.Model):
         db_table = "events"
 
     def __str__(self):
-        return self.day
+        return '{} {} {}'.format(self.day, self.student, self.course)
 
 
 
