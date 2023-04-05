@@ -21,4 +21,4 @@ class Course(models.Model):
         app_label = 'course'
 
     def __str__(self):
-        return self.name
+        return '{}'.format(self.name)

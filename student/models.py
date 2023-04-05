@@ -22,7 +22,7 @@ class Student(models.Model):
         unique_together = (("first_name", "last_name"),)
 
     def __str__(self):
-        return '{} {} {}'.format(self.first_name, self.last_name, self.courses)
+        return '{} {}'.format(self.first_name, self.last_name)
 
     def clean(self):
         if self.pk is None and Student.objects.filter(first_name=self.first_name,
