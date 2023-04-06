@@ -6,6 +6,6 @@ admin.site.register(Course)
 
 
 class CourseAdmin(admin.ModelAdmin):
-    search_fields = ('id', 'name')
+    search_fields = 'name'
     list_display = ['name', ]
     fields = ('name', )

@@ -17,7 +17,7 @@ admin.site.register(Event)
 
 class EventAdmin(admin.ModelAdmin):
 
-    list_display = ['day', 'start_time', 'end_time', 'notes', ]
+    list_display = ['event__student__id', 'day', 'start_time', 'end_time', 'notes', ]
 
     fields = (
         'day',
@@ -27,7 +27,7 @@ class EventAdmin(admin.ModelAdmin):
             )
     # inlines = (StudentInline,)
 
-    # # ------------------------------------------------------------------------------------------------------------------
+    # ------------------------------------------------------------------------------------------------------------------
     # def get_student_name(self, obj: Student) -> str:
     #     result = f'{obj.first_name, obj.last_name}'
     #     return result

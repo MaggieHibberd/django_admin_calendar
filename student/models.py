@@ -19,7 +19,6 @@ class Student(models.Model):
 
     class Meta:
         db_table = "students"
-        unique_together = (("first_name", "last_name"),)
 
     def __str__(self):
         return '{} {}'.format(self.first_name, self.last_name)
