@@ -13,7 +13,7 @@ from student.models import Student
 
 
 class Event(models.Model):
-    day = models.DateField(u'Date of event', help_text=u'Day of the event')
+    day = models.DateField(u'Date of events', help_text=u'Day of the events')
     student = models.ForeignKey(to=Student, on_delete=models.CASCADE, null=False)
     course = models.ForeignKey(to=Course, on_delete=models.CASCADE, null=False)
     start_time = models.TimeField(u'Starting time', help_text=u'Starting time')
@@ -52,7 +52,7 @@ class Event(models.Model):
             for event in events:
                 if self.check_overlap(event.start_time, event.end_time, self.start_time, self.end_time):
                     raise ValidationError(
-                        'There is an overlap with another event: ' + str(event.day) + ', ' + str(
+                        'There is an overlap with another events: ' + str(event.day) + ', ' + str(
                             event.start_time) + '-' + str(event.end_time))
 
     # ------------------------------------------------------------------------------------------------------------------
